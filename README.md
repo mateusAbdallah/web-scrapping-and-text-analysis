@@ -1,0 +1,2 @@
+- beautifulsoup4
+- spacy==3.7.2
