@@ -1,4 +1,0 @@
-- Python's modules
-    - beautifulsoup4
-    - spacy==3.7.2
-    - requests
