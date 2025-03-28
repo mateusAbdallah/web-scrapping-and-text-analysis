@@ -16,7 +16,7 @@ nltk.download('vader_lexicon')
 
 
 # %%
-df = pd.read_csv('wiki_paragraphs.csv')
+df = pd.read_csv('data/wiki_paragraphs.csv')
 df
 
 # %%
