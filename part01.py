@@ -16,7 +16,7 @@ unique_a = set(links)
 list_unique_a = list(unique_a)
 
 # %%
-with open("wiki_paragraphs.csv", "w", newline="", encoding="utf-8") as csvfile:
+with open("data/wiki_paragraphs.csv", "w", newline="", encoding="utf-8") as csvfile:
     writer = csv.writer(csvfile)
     writer.writerow(['title', 'first_paragraph'])
 
