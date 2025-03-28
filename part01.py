@@ -1,35 +1,26 @@
 # %%
-
 from bs4 import BeautifulSoup
 import requests
 import csv
 import time
  
 # %%
-
 BASE_URL = 'https://en.wikipedia.org'
 response = requests.get(BASE_URL)
 html = response.content
 soup = BeautifulSoup(html, 'html.parser')
 
 # %%
-
-# paragraphs = soup.find_all('p')
-# links = [for a in paragraphs]
-
-# %%
-
 links = [a['href'] for a in soup.find_all('a', href=True) if a['href'].startswith('/wiki/')]
 unique_a = set(links)
 list_unique_a = list(unique_a)
 
 # %%
-
 with open("wiki_paragraphs.csv", "w", newline="", encoding="utf-8") as csvfile:
     writer = csv.writer(csvfile)
     writer.writerow(['title', 'first_paragraph'])
 
-    for link in list_unique_a[:2]:
+    for link in list_unique_a[:100]:
         page_url = BASE_URL + link
         page_response = requests.get(page_url)
 
@@ -44,3 +35,5 @@ with open("wiki_paragraphs.csv", "w", newline="", encoding="utf-8") as csvfile:
         
         else:
             print(f'Failed to get {page_url}')
+
+        time.sleep(2)
