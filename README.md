@@ -6,5 +6,5 @@ With some Python's scripts it automates the process of extracting textual conten
 
 # Features
 
-    - Web Scraping: Use BeautifulSoup to scrape text data from HTML page.
-    - Text processing and analysis: tokenization, stopword removal and sentiment analysis using NLTK.
+- Web Scraping: Use BeautifulSoup to scrape text data from HTML page.
+- Text processing and analysis: tokenization, stopword removal and sentiment analysis using NLTK.
